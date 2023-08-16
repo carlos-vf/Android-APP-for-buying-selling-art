@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/botonCompra"
+            android:layout_width="156dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_big_button_main"
+            android:backgroundTint="@color/rounded_grey_button"
+            android:onClick="lanzarBuscador"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <ImageView
+                android:id="@+id/buy_icon"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:onClick="lanzarBuscador"
+                app:layout_constraintBottom_toTopOf="@+id/compra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_cart"
+                app:tint="@color/artrade_gold" />
+
+            <Button
+                android:id="@+id/compra"
+                style="@style/PartialRoundedBlackButton"
+                android:layout_width="0dp"
+                android:onClick="lanzarBuscador"
+                android:text="COMPRA"
+                android:textColor="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/botonVenta"
+            android:layout_width="156dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_big_button_main"
+            android:backgroundTint="@color/artrade_gold"
+            android:onClick="lanzarVenta"
+            app:layout_constraintBottom_toBottomOf="@+id/botonCompra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/botonCompra">
+
+            <ImageView
+                android:id="@+id/sell_icon"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/venta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_euro"
+                app:tint="@android:color/white" />
+
+            <Button
+                android:id="@+id/venta"
+                style="@style/PartialRoundedBlackButton"
+                android:onClick="lanzarVenta"
+                android:text="@string/venta"
+                android:textColor="@color/artrade_gold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perfil"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/botonCompra"
+            app:layout_constraintStart_toStartOf="@+id/botonCompra"
+            app:layout_constraintTop_toBottomOf="@+id/botonCompra">
+
+            <Button
+                android:id="@+id/botonPerfil"
+                style="@style/FullRoundedBlackButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="lanzarAccountDetails"
+                android:text="@string/perfil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:onClick="lanzarAccountDetails"
+                app:layout_constraintBottom_toBottomOf="@+id/perfil"
+                app:layout_constraintStart_toStartOf="@+id/perfil"
+                app:layout_constraintTop_toTopOf="@+id/perfil"
+                app:srcCompat="@drawable/icon_user"
+                app:tint="@android:color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/salir"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/botonVenta"
+            app:layout_constraintStart_toStartOf="@+id/botonVenta"
+            app:layout_constraintTop_toTopOf="@+id/perfil">
+
+            <Button
+                android:id="@+id/botonSalir"
+                style="@style/FullRoundedBlackButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/salir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="lanzarLoginPage" />
+
+            <ImageView
+                android:id="@+id/sign_out_icon"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/salir"
+                app:layout_constraintStart_toStartOf="@+id/salir"
+                app:layout_constraintTop_toTopOf="@+id/salir"
+                app:srcCompat="@drawable/icon_sign_out"
+                app:tint="@android:color/white"
+                android:onClick="lanzarLoginPage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/MenuWelcome"
+            android:layout_marginTop="200dp"
+            android:text="@string/bienvenida"
+            app:layout_constraintStart_toStartOf="@+id/botonCompra"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="409dp"
+            android:layout_height="170dp"
+            android:adjustViewBounds="true"
+            android:scaleX="1.05"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/big_header" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/googleSocialLogin"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/searcher"
+            app:layout_constraintEnd_toEndOf="@+id/header"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            android:onClick="lanzarBuscador">
+
+            <TextView
+                android:id="@+id/googleSocialLoginText"
+                style="@style/GoogleTextLoginPage"
+                android:text="@string/buscador"
+                android:paddingLeft="15dp"
+                android:textSize="16dp"
+                android:textColor="@color/artrade_medium_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/lupa"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:background="@drawable/searcher_button"
+                android:onClick="lanzarBuscador"
+                android:stateListAnimator="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/searcher_icon"
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:background="@drawable/search"
+                android:backgroundTint="@color/white"
+                android:onClick="lanzarBuscador"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lupa"
+                app:layout_constraintTop_toTopOf="@+id/lupa" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/artrade_logo" />
+
+            <ImageView
+                android:id="@+id/golden_line"
+                android:layout_width="413dp"
+                android:layout_height="4dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/header"
+                app:layout_constraintStart_toStartOf="@+id/header"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                app:srcCompat="@drawable/golden_rectangle" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_card"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="31dp"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salir">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:iss_auto_cycle="true"
+                app:iss_period="3000"
+                app:iss_title_background="@color/slider_title" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageHelp"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/help_image_borders"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_card">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/help"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/ayuda"
+            style="@style/Help"
+            android:layout_marginTop="32dp"
+            android:text="@string/ayuda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageHelp" />
+
+        <Button
+            android:id="@+id/faq"
+            style="@style/GenericButton"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/faq_button"
+            android:text="@string/faq"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageHelp"
+            app:layout_constraintStart_toStartOf="@+id/tutorial"
+            app:layout_constraintTop_toBottomOf="@+id/tutorial"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/tutorial"
+            style="@style/GenericButton"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/tutorial_button"
+            android:text="@string/tutorial"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ayuda" />
+
+        <ImageView
+            android:id="@+id/help_icon"
+            android:layout_width="22dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tutorial"
+            app:layout_constraintStart_toStartOf="@+id/tutorial"
+            app:layout_constraintTop_toTopOf="@+id/tutorial"
+            app:srcCompat="@drawable/play" />
+
+        <ImageView
+            android:id="@+id/faq_icon"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/faq"
+            app:layout_constraintStart_toStartOf="@+id/faq"
+            app:layout_constraintTop_toTopOf="@+id/faq"
+            app:srcCompat="@drawable/question_mark" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

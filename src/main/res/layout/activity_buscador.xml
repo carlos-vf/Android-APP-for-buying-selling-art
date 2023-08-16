@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Buscador">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/smallHeader"
+        style = "@style/smallHeader_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/smallHeader_img"
+            style="@style/smallHeader_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/background_adapted_min"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@style/smallHeader_button"
+            android:layout_marginStart="30dp"
+            android:onClick="lanzaMenu"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            style="@style/smallHeader_title"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/artrade_logo" />
+
+        <ImageView
+            android:id="@+id/golden_line"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/golden_rectangle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tituloBuscador"
+        style="@style/text_title"
+        android:layout_marginTop="30dp"
+        android:text="@string/titulo_buscador"
+        app:layout_constraintStart_toStartOf="@+id/tituloText"
+        app:layout_constraintTop_toBottomOf="@+id/smallHeader" />
+
+    <TextView
+        android:id="@+id/tituloText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/titulo_obra"
+        app:layout_constraintBottom_toTopOf="@+id/tituloForm"
+        app:layout_constraintStart_toStartOf="@+id/tituloForm"
+        app:layout_constraintTop_toBottomOf="@+id/tituloBuscador" />
+
+    <EditText
+        android:id="@+id/tituloForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloText" />
+
+    <TextView
+        android:id="@+id/autorText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/autor"
+        app:layout_constraintBottom_toTopOf="@+id/autorForm"
+        app:layout_constraintStart_toStartOf="@+id/tituloForm"
+        app:layout_constraintTop_toBottomOf="@+id/tituloForm" />
+
+    <EditText
+        android:id="@+id/autorForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autorText" />
+
+    <TextView
+        android:id="@+id/corrienteArtistitcaText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/corriente_artistica"
+        app:layout_constraintBottom_toTopOf="@+id/corrienteArtistitcaForm"
+        app:layout_constraintStart_toStartOf="@+id/autorForm"
+        app:layout_constraintTop_toBottomOf="@+id/autorForm" />
+
+    <Spinner
+        android:id="@+id/corrienteArtistitcaForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        android:entries="@array/corrientes_artisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/corrienteArtistitcaText" />
+    <!--
+    <EditText
+        android:id="@+id/corrienteArtistitcaForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/corrienteArtistitcaText" />
+    -->
+
+    <TextView
+        android:id="@+id/precioMinText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/precio_min"
+        app:layout_constraintBottom_toTopOf="@+id/precioMinForm"
+        app:layout_constraintStart_toStartOf="@+id/corrienteArtistitcaForm"
+        app:layout_constraintTop_toBottomOf="@+id/corrienteArtistitcaForm" />
+
+    <EditText
+        android:id="@+id/precioMinForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioMinText" />
+
+    <TextView
+        android:id="@+id/precioText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/precio"
+        app:layout_constraintBottom_toTopOf="@+id/precioForm"
+        app:layout_constraintStart_toStartOf="@+id/precioMinForm"
+        app:layout_constraintTop_toBottomOf="@+id/precioMinForm" />
+
+    <EditText
+        android:id="@+id/precioForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/botonBorrar_container"
+        style="@style/botonBuscador_contenedor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/precioForm"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/botonBorrar_boton"
+            style="@style/botonBuscador_boton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/black"/>
+
+        <ImageView
+            android:id="@+id/botonBorrar_icon"
+            style="@style/botonBuscador_icono"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/delete"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/botonBorrar_text"
+            style="@style/botonBuscador_texto"
+            android:layout_marginStart="5dp"
+            android:text="@string/boton_borrar_filtros"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/botonBorrar_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/botonBuscar_container"
+        style="@style/botonBuscador_contenedor"
+        android:layout_marginBottom="40dp"
+        android:onClick="lanzaResultadoBusqueda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/precioForm">
+
+        <Button
+            android:id="@+id/botonBuscar_boton"
+            style="@style/botonBuscador_boton"
+            android:backgroundTint="@color/artrade_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="lanzaResultadoBusqueda" />
+
+        <ImageView
+            android:id="@+id/botonBuscar_icon"
+            style="@style/botonBuscador_icono"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/search"
+            app:tint="@color/white"
+            android:onClick="lanzaResultadoBusqueda"/>
+
+        <TextView
+            android:id="@+id/botonBuscar_text"
+            style="@style/botonBuscador_texto"
+            android:layout_marginStart="5dp"
+            android:text="@string/boton_buscar_filtros"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/botonBuscar_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="lanzaResultadoBusqueda"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

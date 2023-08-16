@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VentaForm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/smallHeader"
+        style = "@style/smallHeader_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/smallHeader_img"
+            style="@style/smallHeader_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/background_adapted_min"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@style/smallHeader_button"
+            android:layout_marginStart="30dp"
+            android:onClick="lanzaMenu"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            style="@style/smallHeader_title"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/artrade_logo" />
+
+        <ImageView
+            android:id="@+id/golden_line"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/golden_rectangle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tituloBuscador"
+        style="@style/text_title"
+        android:layout_marginTop="30dp"
+        android:text="@string/titulo_ventaForm"
+        app:layout_constraintStart_toStartOf="@+id/tituloText"
+        app:layout_constraintTop_toBottomOf="@+id/smallHeader" />
+
+    <TextView
+        android:id="@+id/tituloText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/titulo_obra"
+        app:layout_constraintBottom_toTopOf="@+id/tituloForm"
+        app:layout_constraintStart_toStartOf="@+id/tituloForm"
+        app:layout_constraintTop_toBottomOf="@+id/tituloBuscador" />
+
+    <EditText
+        android:id="@+id/tituloForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloText" />
+
+    <TextView
+        android:id="@+id/descripcionText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/descripcionForm"
+        app:layout_constraintStart_toStartOf="@+id/tituloForm"
+        app:layout_constraintTop_toBottomOf="@+id/tituloForm" />
+
+    <EditText
+        android:id="@+id/descripcionForm"
+        style="@style/TextField"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionText" />
+
+    <TextView
+        android:id="@+id/autorText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/autor"
+        app:layout_constraintBottom_toTopOf="@+id/autorForm"
+        app:layout_constraintStart_toStartOf="@+id/descripcionForm"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionForm" />
+
+    <EditText
+        android:id="@+id/autorForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autorText" />
+
+    <TextView
+        android:id="@+id/corrienteArtistitcaText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/corriente_artistica"
+        app:layout_constraintBottom_toTopOf="@+id/corrienteArtistitcaForm"
+        app:layout_constraintStart_toStartOf="@+id/autorForm"
+        app:layout_constraintTop_toBottomOf="@+id/autorForm" />
+
+    <Spinner
+        android:id="@+id/corrienteArtistitcaForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        android:entries="@array/corrientes_artisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/corrienteArtistitcaText" />
+
+    <TextView
+        android:id="@+id/precioText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/precio"
+        app:layout_constraintBottom_toTopOf="@+id/precioForm"
+        app:layout_constraintStart_toStartOf="@+id/corrienteArtistitcaForm"
+        app:layout_constraintTop_toBottomOf="@+id/corrienteArtistitcaForm" />
+
+    <EditText
+        android:id="@+id/precioForm"
+        style="@style/TextField"
+        android:hint="€"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioText" />
+
+    <TextView
+        android:id="@+id/imagenesText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/insertar_imagenes"
+        app:layout_constraintBottom_toTopOf="@+id/imagenesForm"
+        app:layout_constraintStart_toStartOf="@+id/precioForm"
+        app:layout_constraintTop_toBottomOf="@+id/precioForm" />
+
+    <EditText
+        android:id="@+id/imagenesForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenesText" />
+
+    <Button
+        android:id="@+id/botonConfirmar"
+        style="@style/BotonContinuar"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="guardaObra"
+        android:text="@string/r1_boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenesForm" />
+
+    <Button
+        android:id="@+id/botonVolver"
+        style="@style/BotonContinuar"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/black"
+        android:onClick="lanzaMenu"
+        android:text="@string/boton_volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenesForm" />
+
+    <ImageView
+        android:id="@+id/imagenIcon"
+        style="@style/imageIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/imagen"
+        app:layout_constraintBottom_toBottomOf="@+id/imagenesText"
+        app:layout_constraintStart_toEndOf="@+id/imagenesText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

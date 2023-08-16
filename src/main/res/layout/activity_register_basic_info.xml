@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterBasic">
+
+    <ImageView
+        android:id="@+id/retroceso"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="38dp"
+        android:onClick="lanzarLogin"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="@+id/nombreForm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/registerTitle"
+        style="@style/HeaderText"
+        android:layout_marginStart="10dp"
+        android:text="@string/r1_titulo"
+        app:layout_constraintBottom_toBottomOf="@+id/retroceso"
+        app:layout_constraintStart_toEndOf="@+id/retroceso"
+        app:layout_constraintTop_toTopOf="@+id/retroceso" />
+
+    <EditText
+        android:id="@+id/nombreForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreText" />
+
+    <EditText
+        android:id="@+id/apellidosForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidosText" />
+
+    <EditText
+        android:id="@+id/emailForm"
+        style="@style/TextField"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <EditText
+        android:id="@+id/contrasenhaForm"
+        style="@style/TextField"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenhaText" />
+
+    <TextView
+        android:id="@+id/nombreText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/r1_nombre"
+        app:layout_constraintBottom_toTopOf="@+id/nombreForm"
+        app:layout_constraintStart_toStartOf="@+id/nombreForm"
+        app:layout_constraintTop_toBottomOf="@+id/registerTitle" />
+
+    <TextView
+        android:id="@+id/apellidosText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/r1_apellidos"
+        app:layout_constraintBottom_toTopOf="@+id/apellidosForm"
+        app:layout_constraintStart_toStartOf="@+id/apellidosForm"
+        app:layout_constraintTop_toBottomOf="@+id/nombreForm" />
+
+    <TextView
+        android:id="@+id/emailText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/r1_email"
+        app:layout_constraintBottom_toTopOf="@+id/emailForm"
+        app:layout_constraintStart_toStartOf="@+id/emailForm"
+        app:layout_constraintTop_toBottomOf="@+id/apellidosForm" />
+
+    <TextView
+        android:id="@+id/contrasenhaText"
+        style="@style/FieldTitles"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/r1_contrasenha"
+        app:layout_constraintBottom_toTopOf="@+id/contrasenhaForm"
+        app:layout_constraintStart_toStartOf="@+id/contrasenhaForm"
+        app:layout_constraintTop_toBottomOf="@+id/emailForm" />
+
+    <Button
+        android:id="@+id/botonConfirmar"
+        style="@style/BotonContinuar"
+        android:layout_marginTop="30dp"
+        android:onClick="avanzaRegistroNoPopup"
+        android:text="@string/r1_boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenhaForm" />
+
+    <TextView
+        android:id="@+id/separadorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/separator_char"
+        android:textColor="@color/artrade_dark_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonConfirmar" />
+
+    <View
+        android:id="@+id/separador1"
+        style="@style/LinearSeparatorRegistro"
+        android:layout_marginEnd="15dp"
+        android:background="@color/artrade_dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/separadorText"
+        app:layout_constraintEnd_toStartOf="@+id/separadorText"
+        app:layout_constraintStart_toStartOf="@+id/contrasenhaForm"
+        app:layout_constraintTop_toTopOf="@+id/separadorText" />
+
+    <View
+        android:id="@+id/separador2"
+        style="@style/LinearSeparatorRegistro"
+        android:layout_marginStart="15dp"
+        android:background="@color/artrade_dark_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/separadorText"
+        app:layout_constraintEnd_toEndOf="@+id/contrasenhaForm"
+        app:layout_constraintStart_toEndOf="@+id/separadorText"
+        app:layout_constraintTop_toTopOf="@+id/separadorText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/googleSocialLogin"
+        style="@style/GoogleRegisterPage"
+        android:onClick="avanzaRegistro"
+        app:layout_constraintBottom_toBottomOf="@+id/fbSocialLogin"
+        app:layout_constraintStart_toStartOf="@+id/separador1">
+
+        <ImageView
+            android:id="@+id/googleSocialLoginIcon"
+            style="@style/SocialLoginIconRegisterPage"
+            android:layout_width="27dp"
+            android:layout_height="29dp"
+            android:src="@drawable/google_64x64"
+            app:layout_constraintBottom_toTopOf="@+id/googleSocialLoginText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/googleSocialLoginText"
+            style="@style/GoogleTextRegisterPage"
+            android:layout_marginBottom="12dp"
+            android:text="@string/boton_google"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fbSocialLogin"
+        style="@style/FbRegisterPage"
+        android:layout_marginTop="24dp"
+        android:onClick="avanzaRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separadorText">
+
+        <ImageView
+            android:id="@+id/fbSocialLoginIcon"
+            style="@style/SocialLoginIconRegisterPage"
+            android:src="@drawable/facebook_64x64"
+            app:layout_constraintBottom_toTopOf="@+id/fbSocialLoginText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fbSocialLoginText"
+            style="@style/FbTextRegisterPage"
+            android:layout_marginBottom="12dp"
+            android:text="@string/boton_facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appleSocialLogin"
+        style="@style/AppleRegisterPage"
+        android:layout_marginStart="15dp"
+        android:onClick="avanzaRegistro"
+        app:layout_constraintEnd_toEndOf="@+id/separador2"
+        app:layout_constraintStart_toEndOf="@+id/fbSocialLogin"
+        app:layout_constraintTop_toTopOf="@+id/fbSocialLogin">
+
+        <ImageView
+            android:id="@+id/appleSocialLoginIcon"
+            style="@style/SocialLoginIconRegisterPage"
+            android:src="@drawable/apple_64x64"
+            app:layout_constraintBottom_toTopOf="@+id/appleSocialLoginText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appleSocialLoginText"
+            style="@style/FbTextRegisterPage"
+            android:layout_marginBottom="12dp"
+            android:text="@string/boton_apple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/iniciaSesion"
+        style="@style/LoginSuggestText"
+        android:onClick="lanzarLogin"
+        android:text="@string/r1_iniciaSesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbSocialLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

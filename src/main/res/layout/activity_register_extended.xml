@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterExtended">
+
+  <ImageView
+      android:id="@+id/retroceso"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginTop="38dp"
+      android:onClick="lanzarRegistroBasico"
+      android:src="@drawable/left_arrow"
+      app:layout_constraintStart_toStartOf="@+id/direccionForm"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/pageTitle"
+      style="@style/HeaderText"
+      android:layout_marginStart="10dp"
+      android:text="@string/r2_titulo"
+      app:layout_constraintBottom_toBottomOf="@+id/retroceso"
+      app:layout_constraintStart_toEndOf="@+id/retroceso"
+      app:layout_constraintTop_toTopOf="@+id/retroceso" />
+
+  <TextView
+      android:id="@+id/r2Seccion1"
+      style="@style/BlockTitle"
+      android:layout_marginTop="25dp"
+      android:text="@string/r2_seccion1"
+      app:layout_constraintStart_toStartOf="@+id/direccionForm"
+      app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
+
+  <EditText
+      android:id="@+id/direccionForm"
+      style="@style/TextField"
+      android:layout_marginTop="5dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/nombreText" />
+
+  <EditText
+      android:id="@+id/localidadForm"
+      style="@style/SpecialTextField"
+      android:layout_width="180dp"
+      android:layout_marginTop="5dp"
+      app:layout_constraintStart_toStartOf="@+id/direccionForm"
+      app:layout_constraintTop_toBottomOf="@+id/localidadText" />
+
+  <EditText
+      android:id="@+id/cpForm"
+      style="@style/SpecialTextField"
+      android:layout_width="0dp"
+      android:layout_marginStart="5dp"
+      android:layout_marginTop="5dp"
+      app:layout_constraintEnd_toEndOf="@+id/direccionForm"
+      app:layout_constraintStart_toEndOf="@+id/localidadForm"
+      app:layout_constraintTop_toBottomOf="@+id/cpText" />
+
+  <EditText
+      android:id="@+id/provinciaForm"
+      style="@style/SpecialTextField"
+      android:layout_width="143dp"
+      android:layout_marginTop="5dp"
+      app:layout_constraintStart_toStartOf="@+id/localidadForm"
+      app:layout_constraintTop_toBottomOf="@+id/provinciaText" />
+
+  <EditText
+      android:id="@+id/paisForm"
+      style="@style/SpecialTextField"
+      android:layout_width="0dp"
+      android:layout_marginStart="5dp"
+      android:layout_marginTop="5dp"
+      app:layout_constraintEnd_toEndOf="@+id/cpForm"
+      app:layout_constraintStart_toEndOf="@+id/provinciaForm"
+      app:layout_constraintTop_toBottomOf="@+id/paisText" />
+
+  <TextView
+      android:id="@+id/r2Seccion2"
+      style="@style/BlockTitle"
+      android:layout_marginTop="40dp"
+      android:text="@string/r2_seccion2"
+      app:layout_constraintStart_toStartOf="@+id/cuentaBancariaForm"
+      app:layout_constraintTop_toBottomOf="@+id/provinciaForm" />
+
+
+  <EditText
+      android:id="@+id/cuentaBancariaForm"
+      style="@style/TextField"
+      android:layout_marginTop="5dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaText" />
+
+  <TextView
+      android:id="@+id/nombreText"
+      style="@style/FieldTitles"
+      android:layout_marginTop="12dp"
+      android:text="@string/r2_direccion"
+      app:layout_constraintStart_toStartOf="@+id/direccionForm"
+      app:layout_constraintTop_toBottomOf="@+id/r2Seccion1" />
+
+  <TextView
+      android:id="@+id/localidadText"
+      style="@style/FieldTitles"
+      android:layout_marginTop="12dp"
+      android:text="@string/r2_localidad"
+      app:layout_constraintStart_toStartOf="@+id/localidadForm"
+      app:layout_constraintTop_toBottomOf="@+id/direccionForm" />
+
+  <TextView
+      android:id="@+id/cpText"
+      style="@style/FieldTitles"
+      android:text="@string/r2_cp"
+      app:layout_constraintStart_toStartOf="@+id/cpForm"
+      app:layout_constraintTop_toTopOf="@+id/localidadText" />
+
+  <TextView
+      android:id="@+id/provinciaText"
+      style="@style/FieldTitles"
+      android:layout_marginTop="12dp"
+      android:text="@string/r2_provincia"
+      app:layout_constraintStart_toStartOf="@+id/provinciaForm"
+      app:layout_constraintTop_toBottomOf="@+id/localidadForm" />
+
+  <TextView
+      android:id="@+id/paisText"
+      style="@style/FieldTitles"
+      android:text="@string/r2_pais"
+      app:layout_constraintStart_toStartOf="@+id/paisForm"
+      app:layout_constraintTop_toTopOf="@+id/provinciaText" />
+
+  <TextView
+      android:id="@+id/cuentaBancariaText"
+      style="@style/FieldTitles"
+      android:layout_marginTop="16dp"
+      android:text="@string/r2_cuentaBancaria"
+      app:layout_constraintStart_toStartOf="@+id/cuentaBancariaForm"
+      app:layout_constraintTop_toBottomOf="@+id/r2Seccion2" />
+
+  <Button
+      android:id="@+id/botonFinalizar"
+      style="@style/BotonContinuar"
+      android:layout_marginTop="30dp"
+      android:onClick="terminaRegistro"
+      android:text="@string/r2_boton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaForm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

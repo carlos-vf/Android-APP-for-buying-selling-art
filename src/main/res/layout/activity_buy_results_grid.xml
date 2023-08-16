@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuyResultsGrid">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/smallHeader"
+            style = "@style/smallHeader_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/smallHeader_img"
+                style="@style/smallHeader_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background_adapted_min" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/smallHeader_button"
+                android:layout_marginStart="30dp"
+                android:onClick="lanzaMenu"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView7"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                style="@style/smallHeader_title"
+                android:layout_marginStart="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/artrade_logo" />
+
+            <ImageView
+                android:id="@+id/golden_line"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/golden_rectangle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busquedaMod"
+            style="@style/modiBusqueda"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="lanzarBuscador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title2">
+
+            <ImageView
+                android:id="@+id/imageLapiz"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/lapiz"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/botonModificarBusqueda"
+                style="@style/modiBusqueda"
+                android:layout_marginStart="20dp"
+                android:text="Modificar búsqueda"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageLapiz"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vistas"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/prod2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/busquedaMod"
+            app:srcCompat="@drawable/vista1">
+
+            <ImageView
+                android:id="@+id/imageVista1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="cambiarVista"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vista1b" />
+
+            <ImageView
+                android:id="@+id/imageVista2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vista2b" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/title1"
+            style="@style/tituloBusqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Compra de cuadros"
+            android:textColor="@color/artrade_gray_author"
+            app:layout_constraintStart_toStartOf="@+id/title2"
+            app:layout_constraintTop_toBottomOf="@+id/smallHeader" />
+
+        <TextView
+            android:id="@+id/title2"
+            style="@style/subtituloBusqueda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Resultados para 'null'"
+            android:textColor="@color/artrade_gray_author"
+            app:layout_constraintStart_toStartOf="@+id/busquedaMod"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prod1"
+            style="@style/cuadrosProd"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/full_rounded_box"
+            android:backgroundTint="@color/artrade_fondo_foto"
+            app:layout_constraintBottom_toBottomOf="@+id/prod2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/prod2">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="304dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/prod1"
+                app:layout_constraintStart_toStartOf="@+id/prod1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/capillasixtina" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/prod1_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bottom_rounded_box"
+                android:backgroundTint="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1">
+
+                <Button
+                    android:id="@+id/botonComprar1"
+                    style="@style/BotonComprar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Comprar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod1_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="LA CAPILLA SIXTINA"
+                    android:textColor="@color/artrade_dark_gray"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod1_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miguel Ángel"
+                    android:textColor="@color/artrade_gray_author"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/prod1_title"
+                    app:layout_constraintTop_toBottomOf="@+id/prod1_title" />
+
+                <TextView
+                    android:id="@+id/prod1_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666,00€"
+                    android:textColor="@color/artrade_gold"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/botonComprar1"
+                    app:layout_constraintStart_toStartOf="@+id/prod1_author"
+                    app:layout_constraintTop_toBottomOf="@+id/prod1_author" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prod2"
+            style="@style/cuadrosProd"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/full_rounded_box"
+            android:backgroundTint="@color/artrade_fondo_foto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vistas">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="304dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/prod2"
+                app:layout_constraintStart_toStartOf="@+id/prod2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/mundopintadoariamis" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/prod2_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_rounded_box"
+                android:backgroundTint="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+                <Button
+                    android:id="@+id/botonComprar2"
+                    style="@style/BotonComprar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Comprar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod2_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="MUNDO PINTADO"
+                    android:textColor="@color/artrade_dark_gray"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod2_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ariamis"
+                    android:textColor="@color/artrade_gray_author"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/prod2_title"
+                    app:layout_constraintTop_toBottomOf="@+id/prod2_title" />
+
+                <TextView
+                    android:id="@+id/prod2_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9.000,07€"
+                    android:textColor="@color/artrade_gold"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/botonComprar2"
+                    app:layout_constraintStart_toStartOf="@+id/prod2_author"
+                    app:layout_constraintTop_toBottomOf="@+id/prod2_author" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prod3"
+            style="@style/cuadrosProd"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/full_rounded_box"
+            android:backgroundTint="@color/artrade_fondo_foto"
+            app:layout_constraintStart_toStartOf="@+id/prod2"
+            app:layout_constraintTop_toBottomOf="@+id/prod2">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="304dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/prod3"
+                app:layout_constraintStart_toStartOf="@+id/prod3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/monalisa" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/prod3_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_rounded_box"
+                android:backgroundTint="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.0">
+
+                <Button
+                    android:id="@+id/botonComprar3"
+                    style="@style/BotonComprar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Comprar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod3_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="LA MONA LISA"
+                    android:textColor="@color/artrade_dark_gray"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod3_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leonardo da Vincci"
+                    android:textColor="@color/artrade_gray_author"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/prod3_title"
+                    app:layout_constraintTop_toBottomOf="@+id/prod3_title" />
+
+                <TextView
+                    android:id="@+id/prod3_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.900,00€"
+                    android:textColor="@color/artrade_gold"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/botonComprar3"
+                    app:layout_constraintStart_toStartOf="@+id/prod3_author"
+                    app:layout_constraintTop_toBottomOf="@+id/prod3_author" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prod4"
+            style="@style/cuadrosProd"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/full_rounded_box"
+            android:backgroundTint="@color/artrade_fondo_foto"
+            app:layout_constraintBottom_toBottomOf="@+id/prod3"
+            app:layout_constraintEnd_toEndOf="@+id/prod1"
+            app:layout_constraintStart_toStartOf="@+id/prod1"
+            app:layout_constraintTop_toBottomOf="@+id/prod1">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="195dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/prod4_info"
+                app:layout_constraintEnd_toEndOf="@+id/prod4"
+                app:layout_constraintStart_toStartOf="@+id/prod4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/thevoid" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/prod4_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_rounded_box"
+                android:backgroundTint="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+                <Button
+                    android:id="@+id/botonComprar4"
+                    style="@style/BotonComprar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Comprar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod4_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="THE VOID"
+                    android:textColor="@color/artrade_dark_gray"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod4_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Markus Persson"
+                    android:textColor="@color/artrade_gray_author"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/prod4_title"
+                    app:layout_constraintTop_toBottomOf="@+id/prod4_title" />
+
+                <TextView
+                    android:id="@+id/prod4_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="800,00€"
+                    android:textColor="@color/artrade_gold"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/botonComprar4"
+                    app:layout_constraintStart_toStartOf="@+id/prod4_author"
+                    app:layout_constraintTop_toBottomOf="@+id/prod4_author" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prod5"
+            style="@style/cuadrosProd"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/full_rounded_box"
+            android:backgroundTint="@color/artrade_fondo_foto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/prod3"
+            app:layout_constraintTop_toBottomOf="@+id/prod3">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="304dp"
+                android:layout_height="195dp"
+                app:layout_constraintEnd_toEndOf="@+id/prod5"
+                app:layout_constraintStart_toStartOf="@+id/prod5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/axurelogo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/prod5_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_rounded_box"
+                android:backgroundTint="@color/gray_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+                <Button
+                    android:id="@+id/botonComprar5"
+                    style="@style/BotonComprar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Comprar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod5_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="LOGOTIPO DE AXURE"
+                    android:textColor="@color/artrade_dark_gray"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/prod5_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Axure Corp."
+                    android:textColor="@color/artrade_gray_author"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/prod5_title"
+                    app:layout_constraintTop_toBottomOf="@+id/prod5_title" />
+
+                <TextView
+                    android:id="@+id/prod5_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.500,00€"
+                    android:textColor="@color/artrade_gold"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/botonComprar5"
+                    app:layout_constraintStart_toStartOf="@+id/prod5_author"
+                    app:layout_constraintTop_toBottomOf="@+id/prod5_author" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

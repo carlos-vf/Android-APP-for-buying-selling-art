@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GENERIC. -->
+    <style name="HeaderText" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="BotonContinuar">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/artrade_gold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextField">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_hint_grey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">35dp</item>
+        <item name="android:layout_marginEnd">35dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/custom_text_field</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="SpecialTextField">
+        <item name="android:layout_height">52dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_hint_grey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@drawable/custom_text_field</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="BlockTitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="FieldTitles" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_medium_gray</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- LOGIN PAGE. -->
+    <style name="LinearSeparatorLogin">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/separator</item>
+    </style>
+    <style name="LoginWelcome" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="LoginFieldTitles" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_bright_gray</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="RegisterSuggestText" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_button</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="GoogleLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_google</item>
+    </style>
+    <style name="FbLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_fb</item>
+    </style>
+    <style name="AppleLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_apple</item>
+    </style>
+    <style name="SocialLoginIconLoginPage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:maxWidth">28dp</item>
+        <item name="android:maxHeight">28dp</item>
+    </style>
+    <style name="GoogleTextLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="FbTextLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="AppleTextLoginPage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- REGISTER PAGES. -->
+    <style name="LinearSeparatorRegistro">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/artrade_dark_gray</item>
+    </style>
+    <style name="LoginSuggestText" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_medium_gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="GoogleRegisterPage">
+        <item name="android:layout_width">98dp</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_google_inverted</item>
+    </style>
+    <style name="FbRegisterPage">
+        <item name="android:layout_width">98dp</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_fb</item>
+    </style>
+    <style name="AppleRegisterPage">
+        <item name="android:layout_width">98dp</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/social_login_apple</item>
+    </style>
+    <style name="SocialLoginIconRegisterPage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:maxWidth">28dp</item>
+        <item name="android:maxHeight">28dp</item>
+    </style>
+    <style name="GoogleTextRegisterPage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="FbTextRegisterPage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="AppleTextRegisterPage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!-- MAIN MENU. -->
+    <style name="MenuWelcome" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="Help" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="FullRoundedBlackButton">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_button</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/rounded_black_button</item>
+    </style>
+    <style name="PartialRoundedBlackButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/rounded_black_button_bottom</item>
+    </style>
+    <style name="GenericButton">
+        <item name="android:layout_width">158dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- OTRAS PAGINAS DE FORMULARIO -->
+
+    <style name="button">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/artrade_gold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Estilo de la cabecera pequenha -->
+    <style name="smallHeader_container">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="smallHeader_img">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">matrix</item>
+    </style>
+
+    <style name="smallHeader_button"
+        parent = "button">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name = "android:padding">9dp</item>
+        <item name = "android:tint">@color/white</item>
+    </style>
+
+    <style name="smallHeader_title">
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <!-- ACCOUNT DETAILS -->
+    <style name="text_title" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_section" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_question" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/artrade_hint_grey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_answer" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- BOTONES DEL BUSCADOR -->
+
+    <style name="botonBuscador_contenedor">
+        <item name="android:layout_width">155dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="botonBuscador_boton"
+        parent = "button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text"> </item>
+    </style>
+
+    <style name="botonBuscador_texto">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:translationZ">90dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="botonBuscador_icono">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name = "android:padding">11dp</item>
+        <item name="android:translationZ">90dp</item>
+    </style>
+
+
+    <style name="boton_editar"
+        parent = "smallHeader_button">
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
+
+    <style name="botonFiltros"
+        parent="BotonContinuar">
+        <item name="android:layout_width">150dp</item>
+    </style>
+
+    <!-- PAGINAS DE PRODUCTOS -->
+
+    <style name="smallHeader">
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">95dp</item>
+    </style>
+
+
+    <!--ESTILO PAGINA DE COMPRA-->
+
+    <style name="BotonModificarBusqueda">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/artrade_dark_gray</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="tituloBusqueda">
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="subtituloBusqueda">
+        <item name="android:textColor">@color/artrade_dark_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="modiBusqueda">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_button</item>
+        <item name="android:background">@drawable/modifica_busqueda</item>
+        <item name="android:backgroundTint">@color/artrade_dark_gray</item>
+    </style>
+
+    <style name="cuadrosProd">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">320dp</item>
+    </style>
+
+    <style name="BotonComprar">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:backgroundTint">@color/artrade_gold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="imageIcon">
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+    </style>
+
+</resources>

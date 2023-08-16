@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AccountDetails">
+
+        <TextView
+            android:id="@+id/emailText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r1_email"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/apellidosUsr" />
+
+        <TextView
+            android:id="@+id/contrasenhaText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r1_contrasenha"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/emailUsr" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/smallHeader"
+            style = "@style/smallHeader_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/smallHeader_img"
+                style="@style/smallHeader_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background_adapted_min"/>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/smallHeader_button"
+                android:layout_marginStart="30dp"
+                android:onClick="lanzaMenu"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                style="@style/smallHeader_title"
+                android:layout_marginStart="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/artrade_logo" />
+
+            <ImageView
+                android:id="@+id/golden_line"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/golden_rectangle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tituloPerfilVisualizador"
+            style="@style/text_title"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/titulo_perfil_visualizador"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/smallHeader" />
+
+        <TextView
+            android:id="@+id/r1Seccion1"
+            style="@style/text_section"
+            android:layout_marginTop="15dp"
+            android:text="@string/r1_seccion1"
+            app:layout_constraintStart_toStartOf="@+id/tituloPerfilVisualizador"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPerfilVisualizador" />
+
+        <TextView
+            android:id="@+id/r2Seccion1"
+            style="@style/text_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/r2_seccion1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contrasenhaUsr" />
+
+        <TextView
+            android:id="@+id/r2Seccion2"
+            style="@style/text_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/r2_seccion2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paisUsr" />
+
+        <TextView
+            android:id="@+id/nombreText"
+            style="@style/text_question"
+            android:layout_marginTop="10dp"
+            android:text="@string/r1_nombre"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/r1Seccion1" />
+
+        <TextView
+            android:id="@+id/direccionText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_direccion"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/r2Seccion1" />
+
+        <TextView
+            android:id="@+id/localidadText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_localidad"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/direccionUsr" />
+
+        <TextView
+            android:id="@+id/cpText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_cp"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/localidadUsr" />
+
+        <TextView
+            android:id="@+id/provinciaText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_provincia"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/cpUsr" />
+
+        <TextView
+            android:id="@+id/paisText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_pais"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/provinciaUsr" />
+
+        <TextView
+            android:id="@+id/cuentaBancariaText"
+            style="@style/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_cuentaBancaria"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion2"
+            app:layout_constraintTop_toBottomOf="@+id/r2Seccion2" />
+
+        <TextView
+            android:id="@+id/nombreUsr"
+            style="@style/text_answer"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_nombre"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/nombreText" />
+
+        <TextView
+            android:id="@+id/direccionUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_direccion"
+            app:layout_constraintStart_toStartOf="@+id/localidadUsr"
+            app:layout_constraintTop_toBottomOf="@+id/direccionText" />
+
+        <TextView
+            android:id="@+id/localidadUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_localidad"
+            app:layout_constraintStart_toStartOf="@+id/cpUsr"
+            app:layout_constraintTop_toBottomOf="@+id/localidadText" />
+
+        <TextView
+            android:id="@+id/cpUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_cp"
+            app:layout_constraintStart_toStartOf="@+id/provinciaUsr"
+            app:layout_constraintTop_toBottomOf="@+id/cpText" />
+
+        <TextView
+            android:id="@+id/provinciaUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_provincia"
+            app:layout_constraintStart_toStartOf="@+id/paisUsr"
+            app:layout_constraintTop_toBottomOf="@+id/provinciaText" />
+
+        <TextView
+            android:id="@+id/paisUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_pais"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/paisText" />
+
+        <TextView
+            android:id="@+id/cuentaBancariaUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_cuenta"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion2"
+            app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaText" />
+
+        <TextView
+            android:id="@+id/apellidosText"
+            style="@style/text_question"
+            android:layout_marginTop="10dp"
+            android:text="@string/r1_apellidos"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/nombreUsr" />
+
+        <TextView
+            android:id="@+id/apellidosUsr"
+            style="@style/text_answer"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_apellidos"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/apellidosText" />
+
+        <TextView
+            android:id="@+id/emailUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_email"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+        <TextView
+            android:id="@+id/contrasenhaUsr"
+            style="@style/text_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/hint_pass"
+            app:layout_constraintStart_toStartOf="@+id/r1Seccion1"
+            app:layout_constraintTop_toBottomOf="@+id/contrasenhaText" />
+
+        <Button
+            android:id="@+id/botonConfirmar"
+            style="@style/BotonContinuar"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="lanzaMenu"
+            android:text="@string/r1_boton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaUsr" />
+
+        <ImageButton
+            android:id="@+id/boton_editar"
+            style="@style/boton_editar"
+            android:layout_marginEnd="30dp"
+            android:onClick="lanzaAccountEdit"
+            app:layout_constraintBottom_toBottomOf="@+id/cuentaBancariaUsr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/edit"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

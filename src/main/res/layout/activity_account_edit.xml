@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AccountEdit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/smallHeader"
+            style = "@style/smallHeader_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/smallHeader_img"
+                style="@style/smallHeader_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background_adapted_min"/>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/smallHeader_button"
+                android:layout_marginStart="30dp"
+                android:onClick="lanzaMenu"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                style="@style/smallHeader_title"
+                android:layout_marginStart="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/artrade_logo" />
+
+            <ImageView
+                android:id="@+id/golden_line"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/golden_rectangle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tituloPerfilEditor"
+            style="@style/text_title"
+            android:layout_marginTop="40dp"
+            android:text="@string/titulo_perfil_editor"
+            app:layout_constraintStart_toStartOf="@+id/nombreText"
+            app:layout_constraintTop_toBottomOf="@+id/smallHeader" />
+
+        <TextView
+            android:id="@+id/r1Seccion1"
+            style="@style/text_section"
+            android:layout_marginTop="15dp"
+            android:text="@string/r1_seccion1"
+            app:layout_constraintStart_toStartOf="@+id/nombreText"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPerfilEditor" />
+
+        <TextView
+            android:id="@+id/nombreText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/r1_nombre"
+            app:layout_constraintBottom_toTopOf="@+id/nombreForm"
+            app:layout_constraintStart_toStartOf="@+id/nombreForm"
+            app:layout_constraintTop_toBottomOf="@+id/r1Seccion1" />
+
+        <EditText
+            android:id="@+id/nombreForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreText" />
+
+        <TextView
+            android:id="@+id/apellidosText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/r1_apellidos"
+            app:layout_constraintBottom_toTopOf="@+id/apellidosForm"
+            app:layout_constraintStart_toStartOf="@+id/apellidosForm"
+            app:layout_constraintTop_toBottomOf="@+id/nombreForm" />
+
+        <EditText
+            android:id="@+id/apellidosForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apellidosText" />
+
+        <TextView
+            android:id="@+id/emailText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/r1_email"
+            app:layout_constraintBottom_toTopOf="@+id/emailForm"
+            app:layout_constraintStart_toStartOf="@+id/emailForm"
+            app:layout_constraintTop_toBottomOf="@+id/apellidosForm" />
+
+        <EditText
+            android:id="@+id/emailForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+        <TextView
+            android:id="@+id/contrasenhaText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/r1_contrasenha"
+            app:layout_constraintBottom_toTopOf="@+id/contrasenhaForm"
+            app:layout_constraintStart_toStartOf="@+id/contrasenhaForm"
+            app:layout_constraintTop_toBottomOf="@+id/emailForm" />
+
+        <EditText
+            android:id="@+id/contrasenhaForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contrasenhaText" />
+
+        <TextView
+            android:id="@+id/r2Seccion1"
+            style="@style/text_section"
+            android:layout_marginTop="30dp"
+            android:text="@string/r2_seccion1"
+            app:layout_constraintStart_toStartOf="@+id/direccionText"
+            app:layout_constraintTop_toBottomOf="@+id/contrasenhaForm" />
+
+        <TextView
+            android:id="@+id/direccionText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="10dp"
+            android:text="@string/r2_direccion"
+            app:layout_constraintStart_toStartOf="@+id/direccionForm"
+            app:layout_constraintTop_toBottomOf="@+id/r2Seccion1" />
+
+        <EditText
+            android:id="@+id/direccionForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/direccionText" />
+
+        <TextView
+            android:id="@+id/localidadText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="12dp"
+            android:text="@string/r2_localidad"
+            app:layout_constraintStart_toStartOf="@+id/localidadForm"
+            app:layout_constraintTop_toBottomOf="@+id/direccionForm" />
+
+        <EditText
+            android:id="@+id/localidadForm"
+            style="@style/SpecialTextField"
+            android:layout_width="180dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/direccionForm"
+            app:layout_constraintTop_toBottomOf="@+id/localidadText" />
+
+        <TextView
+            android:id="@+id/cpText"
+            style="@style/FieldTitles"
+            android:text="@string/r2_cp"
+            app:layout_constraintStart_toStartOf="@+id/cpForm"
+            app:layout_constraintTop_toTopOf="@+id/localidadText" />
+
+        <EditText
+            android:id="@+id/cpForm"
+            style="@style/SpecialTextField"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/direccionForm"
+            app:layout_constraintStart_toEndOf="@+id/localidadForm"
+            app:layout_constraintTop_toBottomOf="@+id/cpText" />
+
+        <TextView
+            android:id="@+id/provinciaText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="12dp"
+            android:text="@string/r2_provincia"
+            app:layout_constraintStart_toStartOf="@+id/provinciaForm"
+            app:layout_constraintTop_toBottomOf="@+id/localidadForm" />
+
+        <EditText
+            android:id="@+id/provinciaForm"
+            style="@style/SpecialTextField"
+            android:layout_width="143dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/r2Seccion2"
+            app:layout_constraintTop_toBottomOf="@+id/provinciaText" />
+
+        <TextView
+            android:id="@+id/paisText"
+            style="@style/FieldTitles"
+            android:text="@string/r2_pais"
+            app:layout_constraintStart_toStartOf="@+id/paisForm"
+            app:layout_constraintTop_toTopOf="@+id/provinciaText" />
+
+        <EditText
+            android:id="@+id/paisForm"
+            style="@style/SpecialTextField"
+            android:layout_width="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/cpForm"
+            app:layout_constraintStart_toEndOf="@+id/provinciaForm"
+            app:layout_constraintTop_toBottomOf="@+id/paisText" />
+
+        <TextView
+            android:id="@+id/r2Seccion2"
+            style="@style/text_section"
+            android:layout_marginTop="30dp"
+            android:text="@string/r2_seccion2"
+            app:layout_constraintStart_toStartOf="@+id/cuentaBancariaText"
+            app:layout_constraintTop_toBottomOf="@+id/provinciaForm" />
+
+        <TextView
+            android:id="@+id/cuentaBancariaText"
+            style="@style/FieldTitles"
+            android:layout_marginTop="16dp"
+            android:text="@string/r2_cuentaBancaria"
+            app:layout_constraintStart_toStartOf="@+id/cuentaBancariaForm"
+            app:layout_constraintTop_toBottomOf="@+id/r2Seccion2" />
+
+        <EditText
+            android:id="@+id/cuentaBancariaForm"
+            style="@style/TextField"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaText" />
+
+        <Button
+            android:id="@+id/botonFinalizar"
+            style="@style/BotonContinuar"
+            android:layout_marginTop="30dp"
+            android:onClick="lanzaAccountDetails"
+            android:text="@string/r2_boton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuentaBancariaForm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
