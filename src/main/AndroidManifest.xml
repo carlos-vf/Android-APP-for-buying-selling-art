@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/artrade_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/artrade_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Artrade"
+        tools:targetApi="31" >
+
+        <activity
+            android:name=".RegisterExtended"
+            android:exported="false"
+            android:label="@string/title_activity_registro_2"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RegisterBasic"
+            android:exported="false"
+            android:label="@string/title_activity_registro_1"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LoginPage"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Buscador"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AccountDetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AccountEdit"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".VentaForm"
+            android:exported="false"
+            android:label="Vender un cuadro"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BuyResultsGallery"
+            android:exported="false"
+            android:label="Búsqueda"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BuyResultsGrid"
+            android:exported="false"
+            android:label="Búsqueda"
+            android:theme="@style/Theme.Artrade.NoActionBar" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>
